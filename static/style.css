@@ -79,10 +79,17 @@ i{
 /* ------- BASE -------- */
 body{
     background: var(--body-color);
+    /* pointer-events: none; */
 }
-.container{
+.container-own{
     width: 100%;
     position: relative;
+}
+
+.crd{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* ----- NAVIGATION BAR ----- */
@@ -126,6 +133,8 @@ nav{
     font-weight: 500;
     padding-inline: 15px;
     margin-inline: 20px;
+    transition: .3;
+    font-weight: bold;
 }
 .nav-menu-btn{
     display: none;
@@ -143,12 +152,13 @@ nav{
     content: '';
     position: absolute;
     left: 50%;
-    bottom: -15px;
+    bottom: 15px;
     transform: translate(-50%, -50%);
     width: 5px;
     height: 5px;
     background: var(--first-color);
     border-radius: 50%;
+    transition: all 0.5s ease-in-out;
 }
 
 
@@ -317,6 +327,7 @@ h3{
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     flex-direction: column;
     padding-block: 30px 70px;
     padding-inline: 20px;
@@ -340,6 +351,7 @@ h3{
 }
 .about-btn button:hover{
     background: var(--first-color-hover);
+    color: white;
 }
 
 /* ----- ABOUT / SKILLS BOX ----- */
@@ -363,7 +375,7 @@ h3{
 }
 
 /* ----- PROJECTS BOX ----- */
-.project-container{
+.project-container-own{
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -498,6 +510,8 @@ footer{
 .top-footer p{
     font-size: 25px;
     font-weight: 600;
+    text-align: center;
+    justify-content: center;
 }
 .middle-footer .footer-menu{
     display: flex;
@@ -518,6 +532,8 @@ footer{
 .bottom-footer{
     font-size: 14px;
     margin-top: 10px;
+    text-align: center;
+    justify-content: center;
 }
 
 
@@ -602,7 +618,7 @@ footer{
     .about-info, .contact-info{
         width: 100%;
     }
-    .project-container{
+    .project-container-own{
         justify-content: center;
     }
     .project-box{
